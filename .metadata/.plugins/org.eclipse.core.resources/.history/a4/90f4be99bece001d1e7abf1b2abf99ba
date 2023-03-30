@@ -1,0 +1,31 @@
+
+class Product {
+	int price;
+	int bonuspoint;
+	
+	Product(int price) {
+		this.price = price;
+		this.bonuspoint = (int)(this.price/10.0);
+	}
+}
+
+class KtTv extends Product {
+	String name;
+	
+	public KtTv(String name, int price) {
+		this.name = name;
+		super(5000);
+	}
+}
+
+
+
+public class Ex12_Inherit_KeyPoint {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+

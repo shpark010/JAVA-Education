@@ -1,0 +1,19 @@
+import kr.or.kosa.utils.ExClass;
+
+public class Ex04_thorws {
+
+	public static void main(String[] args) {
+		
+		ExClass ex = new ExClass("Temp");
+		
+		try {
+			
+		} catch (Exception e) {
+			
+		} finally {
+			
+		}
+		
+	}
+
+}

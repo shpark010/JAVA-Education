@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="Zcar"/>
+    <fullyQualifiedTypeName name="Zcar2"/>
+    <fullyQualifiedTypeName name="kr.or.kosa.Machine"/>
+    <fullyQualifiedTypeName name="kr.or.kosa.Drink"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
+    <fullyQualifiedTypeName name="Car"/>
+    <fullyQualifiedTypeName name="Ex04_Object_Array"/>
+    <fullyQualifiedTypeName name="Person"/>
+    <fullyQualifiedTypeName name="kr.or.kosa.dto.Emp"/>
+    <fullyQualifiedTypeName name="OverClass"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="kr.or.kosa.dto.Cinema"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="Ex04_thorws"/>
+    <fullyQualifiedTypeName name="kr.or.kosa.utils.ExClass"/>
+    <fullyQualifiedTypeName name="java.util.StringTokenizer"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="Triangle"/>
+    <fullyQualifiedTypeName name="Buyer2"/>
+</qualifiedTypeNameHistroy>

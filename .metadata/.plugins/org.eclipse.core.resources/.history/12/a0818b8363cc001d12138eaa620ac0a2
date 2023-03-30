@@ -1,0 +1,6 @@
+package kr.or.kosa.dto;
+
+//한건의 데이터를 담을 수 있는 클래스
+public class Emp {
+	
+}

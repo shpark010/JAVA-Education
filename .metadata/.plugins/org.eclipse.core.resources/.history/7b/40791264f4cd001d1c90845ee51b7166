@@ -1,0 +1,44 @@
+/*
+OOP 특징 : 여러개의 (작은)조각(클래스)들을 조립해서 하나의 큰 그림(제품)을 만드는 행위
+설계도 : 메인 설계도의 부분 설계도, 메인 설계도의 하위 설계도, 별도 독립적인 설계도 등등...
+
+1. 상속
+2. 캡슐화(은닉화) >> private
+3. 다형성 (상속관계에서 부모타입이 자식타입의 주소를 가질 수 있다)
+
+상속
+JAVA : child(자식) extends Base(부모)
+C# : child : Base
+
+특징
+1. 다중 상속 불가 (단일 상속 원칙) : 계층적 상속을 통한 다중 상속가능
+2. 계층적 상속 : 여러개의 클래스를 상속
+3. 다중 상속 지원(단, 인터페이스만) interface : 표준, 약속, 규칙, 규약을 정하는 클래스
+
+상속
+1. 진정한 의미 : 재사용성
+2. 단점 : 비용이 많이듬(기업입장 : 초기 설계 비용이 많이 듬)
+부모와 자식의 관계가 너무 끈끈하다(커플링) >> 요즘 코드는 느슨한 관계를 좋아한다.(유지보수에 용이하기 때문)
+3. 재사용성 때문에 처음에는 시간이 많이 걸리지만 나중에는 본전을 뽑는다.(재사용성이 높아져서 언젠가는 힘을 발휘한다)
+ */
+
+class GrandFather {
+	public int gmoney=5000;
+}
+
+class Father extends GrandFather {
+	public int fmoney=3000;
+}
+
+class Child extends Father {
+	public int cmoney=100;
+}
+public class Ex01_Inherit {
+
+	public static void main(String[] args) {
+		
+		Child child = new Child();
+		
+	}
+
+}

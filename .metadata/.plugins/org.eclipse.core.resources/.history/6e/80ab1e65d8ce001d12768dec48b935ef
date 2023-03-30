@@ -1,0 +1,16 @@
+package kr.or.kosa.utils;
+
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+        double A = Double.parseDouble(sc.nextLine());
+        double B = Double.parseDouble(sc.nextLine());
+        double result = A/B;
+        System.out.println(result);
+
+	}
+
+}

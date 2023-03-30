@@ -1,0 +1,61 @@
+import java.util.*;
+
+public class Solution {
+    static int n;
+    static char[][] board;
+    static boolean[][] visited;
+    static int[] dx = {-1, 0, 1, 0};
+    static int[] dy = {0, 1, 0, -1};
+
+    public static void main(String[] args) {
+    	Scanner scanner = new Scanner(System.in);
+
+        int T = scanner.nextInt();  // 테스트 케이스 개수
+
+        for (int t = 1; t <= T; t++) {
+            int N = scanner.nextInt();  // 바둑판의 크기
+            scanner.nextLine();  // 개행 문자 제거
+
+            char[][] board = new char[N][N];  // 바둑판의 상태를 저장할 이차원 배열
+
+            for (int i = 0; i < N; i++) {
+                String line = scanner.nextLine();
+                for (int j = 0; j < N; j++) {
+                    board[i][j] = line.charAt(j);
+                }
+            }
+
+            int count = 0;  // 먹을 수 있는 알의 개수를 세는 변수
+
+            // 각 포마다 먹을 수 있는 알의 개수를 세어 더함
+            for (int i = 0; i < N; i++) {
+                for (int j = 0; j < N; j++) {
+                    if (board[i][j] == 'X') {  // 이동이 가능한 포인 경우
+                        count += countEatableStones(board, i, j);
+                    }
+                }
+            }
+
+            System.out.println("#" + t + " " + count);
+        }
+    }
+
+    public static int dfs(int x, int y) {
+        visited[x][y] = true;
+        int count = 1;
+
+        for (int i = 0; i < 4; i++) {
+            int nx = x + dx[i];
+            int ny = y + dy[i];
+
+            if (nx < 0 || nx >= n || ny < 0 || ny >= n) continue;
+            if (board[nx][ny] == 'Y') count++;
+
+            if (!visited[nx][ny] && board[nx][ny] != 'S') {
+                count += dfs(nx, ny);
+            }
+        }
+
+        return count;
+    }
+}

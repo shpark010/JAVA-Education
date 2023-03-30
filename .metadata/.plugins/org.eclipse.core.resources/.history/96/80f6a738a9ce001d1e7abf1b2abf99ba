@@ -1,0 +1,14 @@
+/*
+private
+default
+public
+상속관계에서 protected
+*/
+public class Ex08_Inherit_Protected {
+
+	public static void main(String[] args) {
+		
+		
+	}
+
+}

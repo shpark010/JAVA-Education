@@ -1,0 +1,18 @@
+
+public class Ex04_thorws {
+
+	public static void main(String[] args) {
+		
+		ExClass ex = new Ex04_thorws("Temp");
+		
+		try {
+			
+		} catch (Exception e) {
+			
+		} finally {
+			
+		}
+		
+	}
+
+}

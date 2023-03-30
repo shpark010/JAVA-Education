@@ -1,0 +1,21 @@
+/*
+변수 <> 상수
+상수 : 한 번 값이 [초기화] 되면 변경 불가
+상수자원 : 고유값 ex) 주민번호, 성별, 수학(파이 3.141591...)
+상수 관용적으로 대문자
+
+JAVA : final int NUM = 10;
+C# : const integer NUM = 10;
+
+final 키워드
+1. final class Car {} -> 상속 금지
+
+*/
+public class Ex07_final {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

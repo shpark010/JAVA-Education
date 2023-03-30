@@ -1,0 +1,17 @@
+//두개의 설계도
+class Tv {
+	boolean power;
+	int ch;
+	
+	void tvPower() {
+		
+	}
+}
+public class Ex02_Inherit {
+
+	public static void main(String[] args) {
+		
+		
+	}
+
+}

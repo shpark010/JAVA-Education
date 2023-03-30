@@ -1,0 +1,43 @@
+/*
+Today Point
+상속관계에서 Override : 상속관계에서 자식이 부모의 함수를 [재정의]하는 것.
+[상속관계]에서 [자식클래스]가 [부모클래스]의 method를 재정의(내용을 바꿈)
+재정의 : 틀(함수 이름, 타입)의 변화가 없고 내용만 변환(중괄호 안에 실행코드 수정)
+
+문법)
+1. 부모함수 이름과 동일
+2. 부모함수 parameter가 동일
+3. 부모함수 return type 동일
+4. 결국 { 실행블럭 코드만 변경 }
+*/
+
+class Point2 {
+	int x = 4;
+	int y = 5;
+	
+	String getPosition() {
+		return this.x + " / " + this.y;
+	}
+}
+
+class Point3D extends Point2 {
+	int z = 6;
+	
+	//z가 포함된 함수
+	//getPosition() 함수 이미 부모클래스에 존재
+	String getPosition() {
+		return this.x + " / " + this.y + " / " + this.z;
+	}
+	
+	
+}
+
+public class Ex04_Inherit_Override {
+
+	public static void main(String[] args) {
+		Point3D p = new Point3D();
+		String result = p.getPosition();
+		System.out.println(result);
+	}
+
+}

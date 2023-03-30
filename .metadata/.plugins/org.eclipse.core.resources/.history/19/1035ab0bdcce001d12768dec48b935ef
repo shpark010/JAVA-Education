@@ -1,0 +1,21 @@
+package kr.or.kosa.utils;
+
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) {
+		int[] num_list = {1,2,3,4,5};
+		 for(int i = 0 ; i < (num_list.length/2) ; i++) {
+	            int temp = 0;
+	            temp = num_list[i];
+	            num_list[i] = num_list[num_list.length-i];
+	            num_list[num_list.length-i] = num_list[i];
+	        }
+		 for (int i : num_list) {
+			System.out.println(i);
+		}
+
+	}
+
+}

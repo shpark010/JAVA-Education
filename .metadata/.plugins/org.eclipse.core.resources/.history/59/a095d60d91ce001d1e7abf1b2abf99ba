@@ -1,0 +1,39 @@
+//두개의 설계도
+class Tv {
+	boolean power;
+	int ch;
+	
+	void tvPower() {	//두개의 기능을 하나의 함수로 처리
+		//boolean
+		this.power = !this.power;	//전원 스위치(토글링)
+	}
+	void chUp() {
+		this.ch++;
+	}
+	void chDown() {
+		this.ch--;
+	}
+}
+
+class Vcr {	//비디오 플레이어
+	boolean power;
+	
+	void VcrPower() {
+		this.power = !this.power;	//전원 스위치(토글링)
+	}
+	void play() {
+		System.out.println("재생하기");
+	}
+	void stop() {
+		System.out.println("정지하기");
+	}
+}
+
+public class Ex02_Inherit {
+
+	public static void main(String[] args) {
+		
+		
+	}
+
+}

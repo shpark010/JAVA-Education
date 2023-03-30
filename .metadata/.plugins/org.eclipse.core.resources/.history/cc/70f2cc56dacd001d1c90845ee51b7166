@@ -1,0 +1,88 @@
+import java.util.Scanner;
+
+public class Solution {
+	static int AnswerN;	// 먹을 수 있는 알의 수를 저장할 변수
+	static int N = 10;	// 초기 바둑판 크기를 설정
+	
+	public static void main(String[] args) {
+		   Scanner sc = new Scanner(System.in);
+		   
+		   int T = sc.nextInt(); // 테스트 케이스의 개수를 입력받는다.
+		   
+		   for(int test_case = 1 ; test_case <= T ; test_case++) { // 각 테스트 케이스마다 실행
+			   N = sc.nextInt(); // 바둑판 크기를 입력받는다. 
+		       char[][] board = new char[N][N]; // 입력된 바둑판의 상태를 저장할 2차원 배열을 생성한다.
+
+		       // 입력된 바둑판의 상태를 2차원 배열에 저장한다.
+		       for (int i = 0; i < N; i++) {
+		           for (int j = 0; j < N; j++) {
+		               board[i][j] = sc.next().charAt(0);
+		           }
+		       }
+
+		       AnswerN = 0; // 먹을 수 있는 알의 수를 초기화한다.
+
+		       // 모든 위치에 대해서 각각 먹을 수 있는 알의 수를 계산한다.
+		       for (int i = 0; i < N; i++) {
+		           for (int j = 0; j < N; j++) {
+		               if (board[i][j] == 'X') { // 해당 위치가 포인 경우
+		                   int cnt = countEatableEggs(board, i, j); // 해당 포가 먹을 수 있는 알의 수를 계산한다.
+		                   if (cnt > AnswerN) AnswerN = cnt; // 먹을 수 있는 알의 수가 더 많은 경우, AnswerN을 업데이트한다.
+		               }
+		           }
+		       }
+
+		       // 각 테스트 케이스마다 번호와 먹을 수 있는 알의 수를 출력한다.
+			   System.out.println("\n#" + test_case + ' ' + AnswerN);
+		   }
+		}
+
+	public static int countEatableEggs(char[][] board, int x, int y) {
+	    // 해당 포의 위치에 알이 없으면 0을 반환
+	    if (board[x][y] != 'X') {
+	        return 0;
+	    }
+	    
+	    int count = 0;
+	    // 위쪽으로 이동하며 먹을 수 있는 알의 개수 카운트
+	    for (int i = x - 1; i >= 0; i--) {
+	        if (board[i][y] == 'H') {
+	            count++;
+	        } else if (board[i][y] != 'L') { // 알을 넘어야 함
+	            break;
+	        }
+	    }
+	    // 아래쪽으로 이동하며 먹을 수 있는 알의 개수 카운트
+	    for (int i = x + 1; i < N; i++) {
+	        if (board[i][y] == 'H') {
+	            count++;
+	        } else if (board[i][y] != 'L') { // 알을 넘어야 함
+	            break;
+	        }
+	    }
+	    // 왼쪽으로 이동하며 먹을 수 있는 알의 개수 카운트
+	    for (int i = y - 1; i >= 0; i--) {
+	        if (board[x][i] == 'H') {
+	            count++;
+	        } else if (board[x][i] != 'L') { // 알을 넘어야 함
+	            break;
+	        }
+	    }
+	    // 오른쪽으로 이동하며 먹을 수 있는 알의 개수 카운트
+	    for (int i = y + 1; i < N; i++) {
+	        if (board[x][i] == 'H') {
+	            count++;
+	        } else if (board[x][i] != 'L') { // 알을 넘어야 함
+	            break;
+	        }
+	    }
+	    
+	    return count;
+	}
+
+
+
+
+
+
+}
