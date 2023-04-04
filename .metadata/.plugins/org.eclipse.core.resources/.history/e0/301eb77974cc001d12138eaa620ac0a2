@@ -1,9 +1,0 @@
-package kr.or.kosa.dto;
-
-public class Lnumber {
-
-	public static void main(String[] args) {
-		int[] lotto = new int[6];
-	}
-
-}

@@ -5,7 +5,6 @@
     <fullyQualifiedTypeName name="kr.or.kosa.Machine"/>
     <fullyQualifiedTypeName name="kr.or.kosa.Drink"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
     <fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
     <fullyQualifiedTypeName name="Car"/>
@@ -13,7 +12,6 @@
     <fullyQualifiedTypeName name="Person"/>
     <fullyQualifiedTypeName name="kr.or.kosa.dto.Emp"/>
     <fullyQualifiedTypeName name="OverClass"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="kr.or.kosa.dto.Cinema"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="java.io.IOException"/>
@@ -44,4 +42,11 @@
     <fullyQualifiedTypeName name="CommandCenter"/>
     <fullyQualifiedTypeName name="C"/>
     <fullyQualifiedTypeName name="F"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.util.Vector"/>
+    <fullyQualifiedTypeName name="Ex02_ArrayList"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>
