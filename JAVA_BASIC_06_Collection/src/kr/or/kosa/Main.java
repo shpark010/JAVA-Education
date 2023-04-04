@@ -62,6 +62,7 @@ public class Main {
         
         System.out.println("\n***계좌번호가 1111인 계좌에 잔고 초과해서 출금시도해보기***");
         kim.withdraw(100000);
+        System.out.println();
 	}
 
 }
