@@ -1,11 +1,11 @@
-package kr.or.kosa.utils;
+package kr.or.kosa;
 
 public class Test {
 
 	public static void main(String[] args) {
-		Lotto l = new Lotto();
-		l.run();
-		
+		BookManager b = new BookManager();
+		b.run();
+
 	}
 
 }
