@@ -39,42 +39,20 @@ public class Machine {
 		System.out.println("****************");
 		while(true) {
 			if(inputMoney == 0) {
-				System.out.println("금액을 투입해 주세요");
-				System.out.println("(종료를 원하시면 '종료'를 입력해 주세요)");
-				System.out.print("입력란 : ");
-				String input = sc.nextLine();
-				//입력받은 금액정보 비교(금액 or 종료)
-				int moneyCheck = insertMoney(input);	
-				// 종료 입력시
-				if(moneyCheck == 0) {
-					System.exit(0);
-				}else {	// 금액 입력시
-					//투입 금액 출력
-					System.out.println("투입한 금액: " + input);
-					while (true) {
-						System.out.println("음료를 선택하세요.");
-						//사용자가 선택한 음료 정보를 설정
-						int selectDrinkNum = choice();	//사용자가 선택한 음료의 번호를 저장
-						Drink selectDrink = selectDrinkInfo(selectDrinkNum);	//음료 번호에 따른 음료 정보 설정
-						if(selectDrink == null) {
-							System.out.println("잘못된 선택입니다. 다시 선택해주세요.");
-							continue; // 다시 음료 선택 부분으로 돌아가도록 함
-						}else {
-							if(selectDrink.getAmount() > 0) {	//음료의 수량이 0개보다 많을 때
-								notice();	//선택한 음료의 정보를 출력
-								compare();	//투입 금액과 음료 가격을 비교
-								break;
-							}else {	//품절인 경우
-								System.out.println("해당 상품은 품절입니다. 다른 상품을 골라주세요");
-								continue;
-							}
-							
-						}
-					}					
-				}
-			}else {
+				
+			}
+			System.out.println("금액을 투입해 주세요");
+			System.out.println("(종료를 원하시면 '종료'를 입력해 주세요)");
+			System.out.print("입력란 : ");
+			String input = sc.nextLine();
+			//입력받은 금액정보 비교(금액 or 종료)
+			int moneyCheck = insertMoney(input);	
+			// 종료 입력시
+			if(moneyCheck == 0) {
+				System.exit(0);
+			}else {	// 금액 입력시
 				//투입 금액 출력
-				System.out.println("투입한 금액: " + inputMoney);
+				System.out.println("투입한 금액: " + input);
 				while (true) {
 					System.out.println("음료를 선택하세요.");
 					//사용자가 선택한 음료 정보를 설정
@@ -96,7 +74,7 @@ public class Machine {
 					}
 				}					
 			}
-			
+
 		}
 	}
 
@@ -184,9 +162,7 @@ public class Machine {
 			selectDrink.decreaseAmount();
 			this.inputMoney -= selectDrink.getPrice();	// 잔돈 계산
 			System.out.println(selectDrink.getDrinkName() + " 음료를 구매하셨습니다.");
-//			System.out.println("거스름돈 " + change + "원을 반환합니다.");
-//			System.out.println("저희 자판기를 이용해 주셔서 감사합니다.");
-//			System.out.println("=============================");
+			returnInputMoney();
 		} else if (answer.equals("N") || answer.equals("n")) {//구매 취소
 			returnInputMoney();
 		} else {
@@ -221,8 +197,4 @@ public class Machine {
             confirm();	// 재귀호출
         }
 	}
-	
-	
-	
-	
 }
