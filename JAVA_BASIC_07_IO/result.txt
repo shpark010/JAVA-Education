@@ -1,0 +1,2 @@
+word = C:\Duzon\Temp\a.txt
+word = C:\Duzon\Temp\new.txt
